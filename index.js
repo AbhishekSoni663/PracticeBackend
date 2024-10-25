@@ -33,7 +33,7 @@ console.log(req.headers.authorization,req.query)
 });
 
 
-app.post('/create',(req,res)=>{
+app.post('/createUser',(req,res)=>{
   const {email , pass} = req.body
   console.log(req.body)
     if (!email && !pass) {
