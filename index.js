@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const path = require("path");
+const config = require("dotenv")
 app.use(express.json())
 app.use(cors())
 
+const PORT = process.env.PORT
 app.post("/login", (req, res) => {
   const { email, pass } = req.body;
   console.log(req.body);
